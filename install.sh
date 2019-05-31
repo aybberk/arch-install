@@ -44,7 +44,7 @@ passwd
 pacman -S grub efibootmgr os-prober ntfs-3g --noconfirm
 
 
-##DEVICE NAME IF BIOS, MOUNT POINT (/boot) IF UEFI
+##DEVICE NAME IF BIOS, MOUNT POINT (/boot or /efi) IF UEFI
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -57,7 +57,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 pacman -S reflector --noconfirm
 reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist 
-pacman -S wpa_supplicant dialog wireless_tools git zsh broadcom-wl zsh networkmanager nm-connection-editor network-manager-applet --noconfirm
+pacman -S wpa_supplicant vim dialog wireless_tools git zsh broadcom-wl zsh networkmanager nm-connection-editor network-manager-applet --noconfirm
 
 #########
 
