@@ -79,6 +79,7 @@ sudo pacman -S breeze-icons        --noconfirm
 sudo pacman -S xcursor-comix       --noconfirm
 sudo pacman -S xcursor-flatbed     --noconfirm
 sudo pacman -S redshift            --noconfirm
+sudo pacman -S light               --noconfirm
 
 
 
@@ -107,7 +108,6 @@ gpg --recv-key FC918B335044912E
 yay -S spotify        --noconfirm
 yay -S dropbox        --noconfirm
 yay -S simplenote     --noconfirm
-yay -S xcursor-breeze --noconfirm
 
 
 
@@ -142,7 +142,6 @@ git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/t
 echo '
 #####SYSTEM THINGS############################
 ## enable net services
-## xbacklight may not be working, fix this by adding config file. see wiki
 ## change sddm config to set theme
 ## run lxappereance to set themes
 ## nitrogen set bg first time ($ nitrogen /path/to/wallpapers/directory/  [!not the bg itself])
