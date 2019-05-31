@@ -102,7 +102,7 @@ sudo pacman -S python-pytorch-cuda --noconfirm
 ################################################################################
 
 #Bu key dropbox icin
-gpg --recv-key FC918B335044912ED      
+gpg --recv-key FC918B335044912E
 
 yay -S spotify        --noconfirm
 yay -S dropbox        --noconfirm
@@ -115,10 +115,6 @@ yay -S xcursor-breeze --noconfirm
 sudo systemctl enable sddm.service
 sudo systemctl enable sshd.service
 #TODO sddm temasi yukle
-
-##### OHMYZSH ######
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh.custom/themes/powerlevel10k
 
 
 #### Sound ####
@@ -137,6 +133,11 @@ git config --global user.name "Ayberk Aydin"
 git clone --separate-git-dir=$HOME/.dotfiles https://github.com/aybberk/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
+
+##### OHMYZSH ######
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh.custom/themes/powerlevel10k
+
 
 echo '
 #####SYSTEM THINGS############################
