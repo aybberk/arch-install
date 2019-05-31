@@ -56,7 +56,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #####################
 
 pacman -S reflector --noconfirm
-reflector -l 200 --sort rate --save /etc/pacman.d/mirrorlist 
+reflector --score 100 --sort rate --save /etc/pacman.d/mirrorlist 
 pacman -S wpa_supplicant vim dialog wireless_tools git zsh broadcom-wl zsh networkmanager nm-connection-editor network-manager-applet --noconfirm
 
 
