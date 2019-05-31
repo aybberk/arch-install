@@ -30,7 +30,7 @@ sudo pacman -S zip                 --noconfirm
 sudo pacman -S transmission-qt     --noconfirm
 sudo pacman -S ristretto           --noconfirm
 sudo pacman -S easytag             --noconfirm
-sudo pacman -S mtpainti            --noconfirm
+sudo pacman -S mtpaint             --noconfirm
 sudo pacman -S audacity            --noconfirm
 sudo pacman -S neofetch            --noconfirm
 sudo pacman -S deadbeef            --noconfirm
@@ -71,7 +71,7 @@ sudo pacman -S fbreader            --noconfirm
 sudo pacman -S dunst               --noconfirm
 sudo pacman -S netcat              --noconfirm
 sudo pacman -S py3status           --noconfirm
-sudo pacman -S lxappereance        --noconfirm
+sudo pacman -S lxappearance        --noconfirm
 sudo pacman -S arc-gtk-theme       --noconfirm
 sudo pacman -S arc-icon-theme      --noconfirm
 sudo pacman -S breeze-gtk          --noconfirm
