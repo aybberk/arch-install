@@ -59,9 +59,6 @@ pacman -S reflector --noconfirm
 reflector -l 100 --sort rate --save /etc/pacman.d/mirrorlist 
 pacman -S wpa_supplicant vim dialog wireless_tools git zsh broadcom-wl zsh networkmanager nm-connection-editor network-manager-applet --noconfirm
 
-#########
-
-systemctl enable NetworkManager.service
 
 ####################################
 ####### Add User ###################
