@@ -145,5 +145,6 @@ echo '
 ## xbacklight may not be working, fix this by adding config file. see wiki
 ## change sddm config to set theme
 ## run lxappereance to set themes
+## nitrogen set bg first time ($ nitrogen /path/to/wallpapers/directory/  [!not the bg itself])
 ##################################################
 '
