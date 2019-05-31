@@ -5,7 +5,7 @@
 
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+makepkg -si --noconfirm
 rm yay -rf
 
 ###################################
