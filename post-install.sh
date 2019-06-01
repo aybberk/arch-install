@@ -138,10 +138,11 @@ git config --global user.email "e187569@metu.edu.tr"
 git config --global user.name "Ayberk Aydin"        
 
 
-# handle dotfiles
+#### handle dotfilesi #####
 git clone --separate-git-dir=$HOME/.dotfiles https://github.com/aybberk/dotfiles.git tmpdotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
+git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git 
 
 ##### OHMYZSH ######
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -153,6 +154,8 @@ echo '
 ## enable net services
 ## change sddm config to set theme
 ## run lxappereance to set themes
+## $dotfiles checkout
 ## nitrogen set bg first time ($ nitrogen /path/to/wallpapers/directory/  [!not the bg itself])
+
 ##################################################
 '
