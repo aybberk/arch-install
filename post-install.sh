@@ -1,3 +1,10 @@
+###################################
+#### Make directories to home #####
+###################################
+mkdir $HOME/Downloads
+mkdir $HOME/Pictures
+mkdir $HOME/Desktop
+
 
 ###################################
 ##### Setup yay ###################
@@ -6,6 +13,7 @@
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
+cd ..
 rm yay -rf
 
 ###################################
@@ -40,6 +48,7 @@ sudo pacman -S libmad              --noconfirm
 sudo pacman -S unzip               --noconfirm
 sudo pacman -S chromium            --noconfirm
 sudo pacman -S i3                  --noconfirm
+sudo pacman -S dmenu               --noconfirm
 sudo pacman -S xautolock           --noconfirm
 sudo pacman -S flameshot           --noconfirm
 sudo pacman -S vim                 --noconfirm
@@ -90,12 +99,12 @@ sudo pacman -S light               --noconfirm
 sudo pacman -S $(pacman -Ssq "^noto-|^ttf-|^otf-") awesome-terminal-fonts --noconfirm
 
 
-###################################
-### Install pytorch   #############
-###################################
+#####################################################################
+### Install pytorch and other scientific computing libs  ############
+#####################################################################
 
 sudo pacman -S python-pytorch-cuda --noconfirm
-
+sudo pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 
 ################################################################################
