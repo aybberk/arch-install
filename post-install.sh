@@ -99,6 +99,28 @@ sudo pacman -S light               --noconfirm
 sudo pacman -S $(pacman -Ssq "^noto-|^ttf-|^otf-") awesome-terminal-fonts --noconfirm
 
 
+################################################################################
+###### Install aur things ######################################################
+################################################################################
+
+#Bu key dropbox icin
+gpg --recv-key FC918B335044912E
+
+yay -S spotify               --noconfirm
+yay -S dropbox               --noconfirm
+yay -S simplenote            --noconfirm
+yay -S pamac-aur             --noconfirm
+
+
+## SDDM themes
+yay -S sddm-breath-theme     --noconfirm
+yay -S chili-sddm-theme      --noconfirm
+
+echo "[Theme]
+Current=chili" | sudo tee /etc/sddm.conf
+
+
+
 #####################################################################
 ### Install pytorch and other scientific computing libs  ############
 #####################################################################
@@ -107,23 +129,10 @@ sudo pacman -S python-pytorch-cuda --noconfirm
 sudo pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 
-################################################################################
-###### Install aur things ######################################################
-################################################################################
-
-#Bu key dropbox icin
-gpg --recv-key FC918B335044912E
-
-yay -S spotify        --noconfirm
-yay -S dropbox        --noconfirm
-yay -S simplenote     --noconfirm
-
-
 
 ### Enable daemons  ###
 sudo systemctl enable sddm.service
-sudo systemctl enable sshd.service
-#TODO sddm temasi yukle
+#sudo systemctl enable sshd.service
 
 
 #### Sound ####
@@ -143,6 +152,7 @@ git clone --separate-git-dir=$HOME/.dotfiles https://github.com/aybberk/dotfiles
 rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
 rm -r tmpdotfiles
 git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git 
+dotfiles config --local status.showUntrackedFiles no
 
 ##### OHMYZSH ######
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
