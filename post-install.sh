@@ -4,7 +4,7 @@
 mkdir $HOME/Downloads
 mkdir $HOME/Pictures
 mkdir $HOME/Desktop
-
+sudo mkdir /media/myusb /media/myhdd /media/mysd -p
 
 ###################################
 ##### Setup yay ###################
@@ -36,9 +36,8 @@ sudo pacman -S openssh             --noconfirm
 sudo pacman -S arandr              --noconfirm
 sudo pacman -S zip                 --noconfirm
 sudo pacman -S transmission-qt     --noconfirm
-sudo pacman -S ristretto           --noconfirm
 sudo pacman -S easytag             --noconfirm
-sudo pacman -S mtpaint             --noconfirm
+sudo pacman -S eog                 --noconfirm
 sudo pacman -S audacity            --noconfirm
 sudo pacman -S neofetch            --noconfirm
 sudo pacman -S deadbeef            --noconfirm
@@ -51,7 +50,9 @@ sudo pacman -S i3                  --noconfirm
 sudo pacman -S dmenu               --noconfirm
 sudo pacman -S xautolock           --noconfirm
 sudo pacman -S flameshot           --noconfirm
-sudo pacman -S vim                 --noconfirm
+sudo pacman -S gvim                --noconfirm
+sudo pacman -S xclip               --noconfirm
+sudo pacman -S xsel                --noconfirm
 sudo pacman -S code                --noconfirm
 sudo pacman -S sddm                --noconfirm
 sudo pacman -S lolcat              --noconfirm
@@ -74,7 +75,7 @@ sudo pacman -S dosfstools          --noconfirm
 sudo pacman -S zip                 --noconfirm
 sudo pacman -S unzip               --noconfirm
 sudo pacman -S unrar               --noconfirm
-sudo pacman -S xarchiver           --noconfirm
+sudo pacman -S file-roller         --noconfirm
 sudo pacman -S libreoffice-still   --noconfirm
 sudo pacman -S fbreader            --noconfirm
 sudo pacman -S dunst               --noconfirm
