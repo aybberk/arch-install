@@ -4,7 +4,6 @@
 mkdir $HOME/Downloads
 mkdir $HOME/Pictures
 mkdir $HOME/Desktop
-sudo mkdir /media/myusb /media/myhdd /media/mysd -p
 
 ###################################
 ##### Setup yay ###################
@@ -38,6 +37,7 @@ sudo pacman -S zip                 --noconfirm
 sudo pacman -S transmission-qt     --noconfirm
 sudo pacman -S easytag             --noconfirm
 sudo pacman -S eog                 --noconfirm
+sudo pacman -S udiskie             --noconfirm
 sudo pacman -S audacity            --noconfirm
 sudo pacman -S neofetch            --noconfirm
 sudo pacman -S deadbeef            --noconfirm
@@ -111,7 +111,7 @@ yay -S spotify               --noconfirm
 yay -S dropbox               --noconfirm
 yay -S simplenote            --noconfirm
 yay -S pamac-aur             --noconfirm
-
+yay -S masterpdfeditor       --noconfirm
 
 ## SDDM themes
 yay -S sddm-breath-theme     --noconfirm
