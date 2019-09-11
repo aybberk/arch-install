@@ -64,7 +64,7 @@ pacman -S wpa_supplicant gvim dialog wireless_tools git zsh broadcom-wl zsh netw
 ####### Add User ###################
 ####################################
 
-useradd -m -G wheel -s /bin/zsh ayb
+useradd -m -G wheel video -s /bin/zsh ayb
 passwd ayb
 
 read -p "uncomment the wheels thing.(with passwd or nopasswd). Press enter to continue"

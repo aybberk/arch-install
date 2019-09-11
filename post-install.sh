@@ -23,6 +23,13 @@ sudo pacman -S xf86-video-nouveau --noconfirm
 sudo pacman -S xorg --noconfirm
 sudo pacman -S bumblebee mesa nvidia xf86-video-intel --noconfirm
 
+
+###################################
+##### Add user to video group######
+##to be able to change backlight###
+###################################
+sudo usermod -a video ayb
+
 ###################################
 ### Install apps      #############
 ###################################
@@ -54,6 +61,10 @@ sudo pacman -S dmenu                --noconfirm
 sudo pacman -S xautolock            --noconfirm
 sudo pacman -S flameshot            --noconfirm
 sudo pacman -S gvim                 --noconfirm
+sudo pacman -S bluez                --noconfirm
+sudo pacman -S bluez-utils          --noconfirm
+sudo pacman -S blueman              --noconfirm
+sudo pacman -S bluez                --noconfirm
 sudo pacman -S xclip                --noconfirm
 sudo pacman -S xsel                 --noconfirm
 sudo pacman -S code                 --noconfirm
@@ -94,7 +105,7 @@ sudo pacman -S breeze-icons         --noconfirm
 sudo pacman -S xcursor-comix        --noconfirm
 sudo pacman -S xcursor-flatbed      --noconfirm
 sudo pacman -S redshift             --noconfirm
-sudo pacman -S light                --noconfirm
+sudo pacman -S brightnessctl        --noconfirm
 sudo pacman -S ctags                --noconfirm
 sudo pacman -S npm                  --noconfirm
 
@@ -141,6 +152,7 @@ sudo pip3 install numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 ### Enable daemons  ###
 sudo systemctl enable sddm.service
+sudo systemctl enable bluetooth.service
 #sudo systemctl enable sshd.service
 
 
