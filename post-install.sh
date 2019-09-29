@@ -64,7 +64,7 @@ sudo pacman -S gvim                 --noconfirm
 sudo pacman -S bluez                --noconfirm
 sudo pacman -S bluez-utils          --noconfirm
 sudo pacman -S blueman              --noconfirm
-sudo pacman -S bluez                --noconfirm
+sudo pacman -S pulseaudio-bluetooth --noconfirm
 sudo pacman -S xclip                --noconfirm
 sudo pacman -S xsel                 --noconfirm
 sudo pacman -S code                 --noconfirm
