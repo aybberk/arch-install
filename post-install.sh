@@ -180,6 +180,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
 
 
+
+
+
+                                 FUCK THIS SHIT ノಠ益ಠノ彡┻━┻ ... just kidding i need to pass ┬━┬ ノ( ゜-゜ノ)
+
+
+
+
 echo '
 #####SYSTEM THINGS############################
 ## enable net services
@@ -189,4 +197,6 @@ echo '
 ## nitrogen set bg first time ($ nitrogen /path/to/wallpapers/directory/  [!not the bg itself])
 
 ##################################################
+
+
 '
