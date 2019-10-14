@@ -1,31 +1,10 @@
-#### Git config name mail ####
-git config --global user.email "e187569@metu.edu.tr" 
-git config --global user.name "Ayberk Aydin"         
-
-
-sudo pacman -Syyu                        --noconfirm
-sudo pacman -S i3 dmenu                  --noconfirm
-
-
-###################################
-##### Setup yay ###################
-###################################
-
-#git clone https://aur.archlinux.org/yay.git
-#cd yay
-#makepkg -si --noconfirm
-#cd ..
-#rm yay -rf
-
-sudo pacman -S yay
-
-###################################
-gsettings set org.mate.session.required-components filemanager ''
-gsettings set org.mate.session.required-components windowmanager 'i3'
-gsettings set org.mate.session.required-components panel ''
+sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
 
 sudo pacman -Rdd caja --noconfirm
 
+sudo pacman -S i3   --noconfirm
+sudo pacman -S dmenu   --noconfirm
+sudo pacman -S yay --noconfirm
 sudo pacman -S vim --noconfirm
 sudo pacman -S base base-devel --noconfirm
 sudo pacman -S chromium --noconfirm
@@ -49,12 +28,21 @@ sudo pacman -S htop --noconfirm
 
 
 
+###################################
+gsettings set org.mate.session.required-components filemanager ''
+gsettings set org.mate.session.required-components windowmanager 'i3'
+gsettings set org.mate.session.required-components panel ''
 
 
-
+###################################
 yay -S spotify --noconfirm
 yay -S dropbox --noconfirm
 yay -S simplenote --noconfirm
+
+
+#### Git config name mail ####
+git config --global user.email "e187569@metu.edu.tr" 
+git config --global user.name "Ayberk Aydin"         
 
 ##### OHMYZSH ######
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -63,10 +51,10 @@ git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/t
 ###################################
 #### handle dotfiles ##############
 ###################################
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/aybberk/dotfiles.git tmpdotfiles
-rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
-rm -r tmpdotfiles
-git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git 
+#git clone --separate-git-dir=$HOME/.dotfiles https://github.com/aybberk/dotfiles.git tmpdotfiles
+#rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
+#rm -r tmpdotfiles
+#git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git 
 
 
 ## KEYBOARD DELAY VS
