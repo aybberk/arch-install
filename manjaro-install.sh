@@ -24,9 +24,9 @@ sudo pacman -S htop --noconfirm
 sudo pacman -S neofetch --noconfirm
 sudo pacman -S cmatrix --noconfirm
 sudo pacman -S htop --noconfirm
-sudo pacman -S htop --noconfirm
 
 
+#sudo pacman -S linux-latest-nvidia-430xx bumblebee mesa xf86-video-intel --noconfirm
 
 ###################################
 gsettings set org.mate.session.required-components filemanager ''
@@ -59,4 +59,19 @@ git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/t
 
 ## KEYBOARD DELAY VS
 ## KEYBOARD SHORTCUTS
+## KEYBOARD LAYOUT EKLE
+## NUMLOCK
+## SUDOERS
 ## SCREENSAVER KAPA
+#This driver now uses DRI3 as the default Direct Rendering
+#Infrastructure. You can try falling back to DRI2 if you run
+#into trouble. To do so, save a file with the following 
+#content as /etc/X11/xorg.conf.d/20-intel.conf :
+#  Section "Device"
+#    Identifier  "Intel Graphics"
+#    Driver      "intel"
+#    Option      "DRI" "2"             # DRI3 is now default 
+#    #Option      "AccelMethod"  "sna" # default
+#    #Option      "AccelMethod"  "uxa" # fallback
+#  EndSection
+
