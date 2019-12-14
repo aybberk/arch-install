@@ -1,37 +1,39 @@
 sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
 
-sudo pacman -Rdd caja --noconfirm
+#sudo pacman -Rdd caja --noconfirm
 
-sudo pacman -S i3   --noconfirm
-sudo pacman -S dmenu   --noconfirm
-sudo pacman -S yay --noconfirm
-sudo pacman -S vim --noconfirm
-sudo pacman -S base base-devel --noconfirm
-sudo pacman -S chromium --noconfirm
-sudo pacman -S termite --noconfirm
-sudo pacman -S py3status --noconfirm
-sudo pacman -S ttf-font-awesome noto-fonts-emoji --noconfirm
-sudo pacman -S nitrogen --noconfirm
-sudo pacman -S redshift  --noconfirm
-sudo pacman -S light  --noconfirm
-sudo pacman -S flameshot --noconfirm
-sudo pacman -S pcmanfm --noconfirm
-sudo pacman -S compton --noconfirm
-sudo pacman -S python-pip --noconfirm
-sudo pacman -S vim --noconfirm
-sudo pacman -S kolourpaint  --noconfirm
-sudo pacman -S htop --noconfirm
-sudo pacman -S neofetch --noconfirm
-sudo pacman -S cmatrix --noconfirm
-sudo pacman -S htop --noconfirm
+#sudo pacman -S i3   --noconfirm
+#sudo pacman -S dmenu   --noconfirm
+#sudo pacman -S yay --noconfirm
+#sudo pacman -S gvim --noconfirm
+#sudo pacman -S base base-devel --noconfirm
+#sudo pacman -S chromium --noconfirm
+#sudo pacman -S termite --noconfirm
+#sudo pacman -S py3status --noconfirm
+#sudo pacman -S ttf-font-awesome noto-fonts-emoji --noconfirm
+#sudo pacman -S nitrogen --noconfirm
+#sudo pacman -S redshift  --noconfirm
+#sudo pacman -S light  --noconfirm
+#sudo pacman -S flameshot --noconfirm
+#sudo pacman -S pcmanfm --noconfirm
+#sudo pacman -S compton --noconfirm
+#sudo pacman -S python-pip --noconfirm
+#sudo pacman -S vim --noconfirm
+#sudo pacman -S kolourpaint  --noconfirm
+#sudo pacman -S htop --noconfirm
+#sudo pacman -S neofetch --noconfirm
+#sudo pacman -S cmatrix --noconfirm
+#sudo pacman -S unrar --noconfirm
+#sudo pacman -S p7zip --noconfirm
+#sudo pacman -S cgvfs-smb --noconfirm
 
 
-#sudo pacman -S linux-latest-nvidia-430xx bumblebee mesa xf86-video-intel --noconfirm
+#sudo pacman -S linux-'something'-nvidia-'something'xx bumblebee mesa xf86-video-intel --noconfirm
 
 ###################################
-gsettings set org.mate.session.required-components filemanager ''
-gsettings set org.mate.session.required-components windowmanager 'i3'
-gsettings set org.mate.session.required-components panel ''
+#gsettings set org.mate.session.required-components filemanager ''
+#gsettings set org.mate.session.required-components windowmanager 'i3'
+#gsettings set org.mate.session.required-components panel ''
 
 
 ###################################
@@ -63,6 +65,8 @@ git clone https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/t
 ## NUMLOCK
 ## SUDOERS
 ## SCREENSAVER KAPA
+## ALT SHIFT KEYBOARD LAYOUT
+## CAPS ESC SWITCH
 #This driver now uses DRI3 as the default Direct Rendering
 #Infrastructure. You can try falling back to DRI2 if you run
 #into trouble. To do so, save a file with the following 
