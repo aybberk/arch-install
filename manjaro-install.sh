@@ -6,6 +6,27 @@ sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
 
 sudo pacman -S i3   --noconfirm
 sudo pacman -S dmenu   --noconfirm
+sudo pacman -Rc xfdesktop
+sudo pacman -R xfwm4
+
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa xfsettingsd
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -s 'xfce4-panel' -t string -s '--disable-wm-check'
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client2_Command -t string -sa i3
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client3_Command -t string -s 'Thunar' -t string -s '--daemon'
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client4_Command -t string -sa ''
+
+xfconf-query -c xfce4-session -p /compat/LaunchGNOME -t bool -s true
+xfconf-query -c xfce4-session -p /general/LockCommand -t string  -s 'i3lock -c 330000'
+
+xfconf-query -c keyboard-layout -p /Default/XkbLayout -t string -s 'us,tr'
+xfconf-query -c keyboard-layout -p /Default/XkbOptions/Compose -t string -s 'compose:ralt'
+xfconf-query -c keyboard-layout -p /Default/XkbOptions/Group -t string -s 'grp:alt_shift_toggle'
+xfconf-query -c keyboard-layout -p /Default/XkbVariant -t string -s ','
+
+xfconf-query -c keyboards -p /Default/KeyRepeat/Delay -t int -s 250
+xfconf-query -c keyboards -p /Default/KeyRepeat/Rate -t int -s 50
+xfconf-query -c keyboards -p /Default/Numlock -t bool -s true 
+
 sudo pacman -S yay --noconfirm
 sudo pacman -S gvim --noconfirm
 sudo pacman -S base base-devel --noconfirm
@@ -17,10 +38,9 @@ sudo pacman -S nitrogen --noconfirm
 sudo pacman -S redshift  --noconfirm
 sudo pacman -S light  --noconfirm
 sudo pacman -S flameshot --noconfirm
-sudo pacman -S pcmanfm --noconfirm
+sudo pacman -S cmake --noconfirm
 sudo pacman -S compton --noconfirm
 sudo pacman -S python-pip --noconfirm
-sudo pacman -S vim --noconfirm
 sudo pacman -S kolourpaint  --noconfirm
 sudo pacman -S htop --noconfirm
 sudo pacman -S neofetch --noconfirm
@@ -33,9 +53,7 @@ sudo pacman -S cgvfs-smb --noconfirm
 git config --global user.email "e187569@metu.edu.tr" 
 git config --global user.name "Ayberk Aydin"         
 
-#sudo pacman -S linux-'something'-nvidia-'something'xx bumblebee mesa xf86-video-intel --noconfirm
-
-
+#sudo pacman -S linux-latest-nvidia-'something'xx bumblebee mesa xf86-video-intel --noconfirm
 
 ###################################
 #### handle dotfiles ##############
@@ -47,10 +65,16 @@ git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git
 
 
 ###################################
+##### Yay Installs ################
+###################################
 #yay -S spotify --noconfirm
 #yay -S dropbox --noconfirm
 #yay -S simplenote --noconfirm
 
+###################################
+####### Pip Installs ##############
+###################################
+#pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 
 ###############################
 # > Session and Startup
@@ -69,19 +93,11 @@ git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git
 ## KEYBOARD DELAY VS
 ## KEYBOARD LAYOUT EKLE
 ## NUMLOCK
-## SUDOERS
 ## SCREENSAVER KAPA
-## ALT SHIFT KEYBOARD LAYOUT
-## CAPS ESC SWITCH
-#This driver now uses DRI3 as the default Direct Rendering
-#Infrastructure. You can try falling back to DRI2 if you run
-#into trouble. To do so, save a file with the following 
-#content as /etc/X11/xorg.conf.d/20-intel.conf :
-#  Section "Device"
-#    Identifier  "Intel Graphics"
-#    Driver      "intel"
-#    Option      "DRI" "2"             # DRI3 is now default 
-#    #Option      "AccelMethod"  "sna" # default
-#    #Option      "AccelMethod"  "uxa" # fallback
-#  EndSection
-
+## CAPS ESC YER DEGIS /etc/X11/xorg.conf.d/00-keyboard.conf
+##
+## SUDOERS
+#
+## VARSA HDD MOUNT
+#
+## THEME CHANGE
