@@ -48,6 +48,8 @@ sudo pacman -S cmatrix --noconfirm
 sudo pacman -S unrar --noconfirm
 sudo pacman -S p7zip --noconfirm
 sudo pacman -S cgvfs-smb --noconfirm
+sudo pacman -S nmap  --noconfirm
+sudo pacman -S rofi  --noconfirm
 
 #### Git config name mail ####
 git config --global user.email "e187569@metu.edu.tr" 
