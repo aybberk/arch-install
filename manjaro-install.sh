@@ -6,26 +6,27 @@ sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
 
 sudo pacman -S i3   --noconfirm
 sudo pacman -S dmenu   --noconfirm
-sudo pacman -Rc xfdesktop
-sudo pacman -R xfwm4
+sudo pacman -Rc xfdesktop --noconfirm
+sudo pacman -R xfwm4 --noconfirm
+
 
 xfconf-query -c xfce4-session -p /sessions/Failsafe/Client0_Command -t string -sa xfsettingsd
 xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -s 'xfce4-panel' -t string -s '--disable-wm-check'
-xfconf-query -c xfce4-session -p /sessions/Failsafe/Client2_Command -t string -sa i3
+xfconf-query -c xfce4-session -p /sessions/Failsafe/Client2_Command -t string -sa i3 --create
 xfconf-query -c xfce4-session -p /sessions/Failsafe/Client3_Command -t string -s 'Thunar' -t string -s '--daemon'
 xfconf-query -c xfce4-session -p /sessions/Failsafe/Client4_Command -t string -sa ''
 
-xfconf-query -c xfce4-session -p /compat/LaunchGNOME -t bool -s true
-xfconf-query -c xfce4-session -p /general/LockCommand -t string  -s 'i3lock -c 330000'
+xfconf-query -c xfce4-session -p /compat/LaunchGNOME -t bool -s true --create
+xfconf-query -c xfce4-session -p /general/LockCommand -t string  -s 'i3lock -c 330000' --create
 
-xfconf-query -c keyboard-layout -p /Default/XkbLayout -t string -s 'us,tr'
-xfconf-query -c keyboard-layout -p /Default/XkbOptions/Compose -t string -s 'compose:ralt'
-xfconf-query -c keyboard-layout -p /Default/XkbOptions/Group -t string -s 'grp:alt_shift_toggle'
-xfconf-query -c keyboard-layout -p /Default/XkbVariant -t string -s ','
+xfconf-query -c keyboard-layout -p /Default/XkbLayout -t string -s 'us,tr' --create
+xfconf-query -c keyboard-layout -p /Default/XkbOptions/Compose -t string -s 'compose:ralt' --create
+xfconf-query -c keyboard-layout -p /Default/XkbOptions/Group -t string -s 'grp:alt_shift_toggle' --create
+xfconf-query -c keyboard-layout -p /Default/XkbVariant -t string -s ',' --create
 
-xfconf-query -c keyboards -p /Default/KeyRepeat/Delay -t int -s 250
-xfconf-query -c keyboards -p /Default/KeyRepeat/Rate -t int -s 50
-xfconf-query -c keyboards -p /Default/Numlock -t bool -s true 
+xfconf-query -c keyboards -p /Default/KeyRepeat/Delay -t int -s 250 --create
+xfconf-query -c keyboards -p /Default/KeyRepeat/Rate -t int -s 50 --create
+xfconf-query -c keyboards -p /Default/Numlock -t bool -s true --create 
 
 sudo pacman -S yay --noconfirm
 sudo pacman -S gvim --noconfirm
@@ -50,6 +51,7 @@ sudo pacman -S p7zip --noconfirm
 sudo pacman -S cgvfs-smb --noconfirm
 sudo pacman -S nmap  --noconfirm
 sudo pacman -S rofi  --noconfirm
+sudo pacman -S neovim  --noconfirm
 
 #### Git config name mail ####
 git config --global user.email "e187569@metu.edu.tr" 
@@ -71,7 +73,7 @@ git clone --bare https://www.github.com/aybberk/dotfiles.git $HOME/.dotfiles.git
 ###################################
 #yay -S spotify --noconfirm
 #yay -S dropbox --noconfirm
-#yay -S simplenote --noconfirm
+#yay -S cpupower-gui  --noconfirm
 
 ###################################
 ####### Pip Installs ##############
